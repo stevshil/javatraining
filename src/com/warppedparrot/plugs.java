@@ -6,6 +6,9 @@ public class plugs {
 		Dave = new Dog();
 		System.out.println(Dave.getState());
 		System.out.println(Dave.scratch());
+		System.out.println(Dave.sleep());
+		Dave.move();
+		System.out.println(Dave.getState());
 	}
 }
 
@@ -29,12 +32,6 @@ class Dog implements Manimal {
 			state="stopped";
 		} else {
 			state = "moving";
-		}
-	}
-	
-	public void sleep() {
-		if ( state != "sleeping" ) {
-			state="sleeping";
 		}
 	}
 	
@@ -69,14 +66,6 @@ class Fish implements Manimal {
 			state="swimming";
 		} else {
 			state="floating";
-		}
-	}
-	
-	public void sleep() {
-		if ( state != "sleeping" ) {
-			state="sleeping";
-		} else {
-			state="awake";
 		}
 	}
 	
